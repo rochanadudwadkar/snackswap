@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SnackSwap</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>SnackSwap</h1>
+      <p>Search a snack and get healthier swaps with calorie savings.</p>
+    </header>
+
+    <section class="card">
+      <label for="query">Search food</label>
+      <form id="searchForm" class="row">
+        <input id="query" placeholder="e.g., potato chips, cookie, soda" />
+        <button id="searchBtn" type="submit">Search</button>
+      </form>         
+      <p class="hint" id="status"></p>
+    </section>
+
+    <section id="mainRow" class="twoCol hidden">
+        <section id="swapResults" class="card hidden"></section>
+      
+        <section id="searchResults" class="card hidden">
+          <h2>Snacks found</h2>
+          <ul id="resultsList"></ul>
+          <div id="pagination" class="pagination"></div>
+        </section>
+      </section>      
+      
+      <section id="foodDetails" class="card hidden"></section>      
+  </main>
+  
+  <footer class="footer-note">
+    Demo app built for product showcase.  
+    Nutrition data powered by USDA FoodData Central.
+  </footer>
+  
+  <script src="app.js"></script>
+</body>
+</html>
