@@ -1,0 +1,154 @@
+:root {
+    --bg: #FFF7ED;
+    --card: #FFFFFF;
+    --primary: #FFF4C2;     /* pastel green */
+    --accent: #FFE3D2;      /* pastel peach */
+    --highlight: #FFF4C2;   /* pastel yellow */
+    --text: #2E3A34;
+    --muted: #6B7C73;
+  }  
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+  }
+.container {
+    width: 100%;
+    max-width: 1100px;   /* wider so two columns fit nicely */
+    margin: 0 auto;
+    padding: 16px;
+    box-sizing: border-box;
+  }  
+header { margin-bottom: 16px;
+
+}
+/* Give breathing room between blocks */
+#mainRow {
+    margin-top: 14px;
+  }
+  
+  #foodDetails {
+    margin-top: 14px;
+  }  
+.card {
+    background: var(--card);
+    border-radius: 14px;
+    padding: 16px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  }
+/* Search row (form) should stretch full width */
+.row {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    width: 100%;
+  }
+/* Input should take remaining space */
+.row input#query {
+    flex: 1;
+    min-width: 0;           /* IMPORTANT: prevents overflow in flex layouts */
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 12px;
+  }
+/* Buttons keep natural size */
+.row button {
+    white-space: nowrap;
+    padding: 10px 14px;
+    border-radius: 12px;
+  }  
+input {
+    border: 1px solid #E4E8E6;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 14px;
+    background: white;
+  }
+button {
+    background: var(--primary);
+    color: var(--text);
+    border: none;
+    border-radius: 10px;
+    padding: 8px 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.05s ease, box-shadow 0.1s ease;
+  }
+button:hover {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  }
+button:active {
+    transform: scale(0.98);
+  }
+.pagination {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+  }
+.pagination .page {
+    padding: 8px 12px;
+  }
+.pagination button {
+    padding: 8px 12px;
+    border-radius: 10px;
+  }
+.pagination .page.active {
+    outline: 2px solid rgba(0,0,0,0.15);
+  }  
+button:disabled { opacity: 0.5; cursor: not-allowed; }
+.hidden { display: none; }
+.hint { color: #555; margin-top: 8px; }
+ul { padding-left: 18px; }
+li { margin: 8px 0; }
+.small { color: #666; font-size: 0.9rem; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.kpi { padding: 12px; border: 1px solid #eee; border-radius: 10px; }
+.twoCol {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    align-items: start;
+  }
+  
+  @media (max-width: 900px) {
+    .twoCol {
+      grid-template-columns: 1fr;
+    }
+}
+details summary {
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 8px;
+  }  
+#searchResults {
+    max-height: 520px;
+    overflow: auto;
+  }  
+* { box-sizing: border-box; }
+.swapList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+  
+.swapItem {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 10px 12px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.7);
+    cursor: pointer;
+}
+  
+.swapItem input {
+    transform: scale(1.1);
+}
+  
+#clearCacheBtn {
+    background: #fff;
+    color: #111;
+  }  
