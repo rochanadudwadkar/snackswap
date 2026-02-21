@@ -23,6 +23,25 @@
 header { margin-bottom: 16px;
 
 }
+.app-header {
+  margin-bottom: 24px;
+}
+
+.title-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+}
+
+.app-header h1 {
+  margin: 0;
+}
+
 /* Give breathing room between blocks */
 #mainRow {
     margin-top: 14px;
